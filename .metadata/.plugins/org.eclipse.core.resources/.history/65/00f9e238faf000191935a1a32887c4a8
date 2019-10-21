@@ -1,0 +1,32 @@
+package com.springboot.one.pojo;
+
+public class Item {
+	private int id;
+	private String name;
+	private String link;
+	private int category;
+	
+	public int getId() {
+		return id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String getLink() {
+		return link;
+	}
+	
+	public int getCategory() {
+		return category;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public void setName() {
+		this.name = name; 
+	}
+}

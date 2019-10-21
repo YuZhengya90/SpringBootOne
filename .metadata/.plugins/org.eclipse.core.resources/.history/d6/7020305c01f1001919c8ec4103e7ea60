@@ -1,0 +1,14 @@
+package com.springboot.one.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+import com.springboot.one.pojo.Item;
+
+
+@Mapper
+public interface ItemMapper {
+	@Select ("SELECT id, name, link, category FROM OITM WHERE Id=#{id}")
+	List<Item> getItem(int id);
+}

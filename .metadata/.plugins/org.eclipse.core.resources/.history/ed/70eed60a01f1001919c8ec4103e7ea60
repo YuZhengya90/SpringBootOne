@@ -1,0 +1,24 @@
+package com.springboot.one.service;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.springboot.one.dao.ItemMapper;
+import com.springboot.one.pojo.Item;
+
+public class ItemServiceImpl implements ItemService {
+	
+	
+	//@Autowired
+	//SqlSessionFactory sqlSessionFactory;
+	
+	@Autowired
+	ItemMapper itemMapper;
+
+	@Override
+	public List<Item> getItem(int id) {
+		return itemMapper.getItem(id);
+	}
+}

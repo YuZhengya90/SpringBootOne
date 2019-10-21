@@ -1,0 +1,11 @@
+#application.yml
+
+spring:
+  profiles:
+    active: dev
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/WonderfulPrice
+    username: root
+    password: HSS1215>
+    driver-class-name: com.mysql.jdbc.Driver

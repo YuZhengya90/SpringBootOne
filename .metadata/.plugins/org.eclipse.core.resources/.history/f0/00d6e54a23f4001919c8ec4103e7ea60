@@ -1,0 +1,51 @@
+package com.springboot.one.service;
+
+import java.io.IOException;
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+
+import com.springboot.one.dao.ItemMapper;
+import com.springboot.one.pojo.Item;
+import com.springboot.one.util.AppSqlSession;
+
+@Component
+public class ItemServiceImpl implements ItemService {
+
+	
+	@Override
+	public Item getItem(int id) {
+		
+		Item item = null;
+		try {
+			ItemMapper itemMapper = AppSqlSession.getSession().getMapper(ItemMapper.class);
+			item = itemMapper.getItem(id);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return item;
+	}
+
+	@Override
+	public List<Item> getItem() {
+		List<Item> itemList = new List<Item>();
+		try {
+			
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+	@Override
+	public void updateItem(Item item) {
+		// TODO Auto-generated method stub
+		
+	}
+}

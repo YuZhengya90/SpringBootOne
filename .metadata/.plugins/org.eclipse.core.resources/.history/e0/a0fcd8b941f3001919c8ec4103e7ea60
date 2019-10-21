@@ -1,0 +1,23 @@
+import java.io.InputStream;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+public class AppSqlSession {
+	
+	private static SqlSession sqlSession = null;
+	
+	public static SqlSession getSession() {
+		if (null == sqlSession) {
+			String resource = "mybatis-config.xml";
+			InputStream is = Resources.getResourceAsStream(resource);
+			
+			SqlSessionFactory sessionFactory = 
+			SqlSessionFactoryBuilder.build();
+		}
+	}
+	
+	
+};

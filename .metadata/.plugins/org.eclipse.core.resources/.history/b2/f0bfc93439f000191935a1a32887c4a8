@@ -1,0 +1,16 @@
+package com.springboot.one.Controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+@RequestMapping("/")
+public class HelloController {
+	
+	@ResponseBody
+	@RequestMapping("/hello")
+	public String hello()
+	{
+		return "Hello!";
+	}
+
+}

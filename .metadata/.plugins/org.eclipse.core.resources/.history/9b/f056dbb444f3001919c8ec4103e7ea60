@@ -1,0 +1,21 @@
+package com.springboot.one.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.springboot.one.pojo.Item;
+import com.springboot.one.service.ItemService;
+
+@RestController
+@GetMapping("/A")
+public class IndexController {
+	
+	@Autowired
+	ItemService itemService;
+	
+	@GetMapping("/show")
+	public Item getItem(int id) {
+		return itemService.getItem(id);
+	}
+}

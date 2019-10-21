@@ -1,0 +1,8 @@
+package com.springboot.one.service;
+
+
+import com.springboot.one.pojo.Item;
+
+public interface ItemService{
+	public Item getItem(int id);
+}
